@@ -121,7 +121,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 304 | naming grill-with-docs skill | General | new | |
 | 302 | CONTEXT-MAP.md ADRs issue? | General | new | relates to #299 |
 | 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
-| 293 | /grill-with-docs to state progress | Ideas | new | relates to #311/#337 |
+| 293 | /grill-with-docs to state progress | Ideas | done | progress was the symptom; real gap = untracked design tree. Added `### Track the design tree` (throwaway `.grill-tree.md`) to grill-with-docs. Filed upstream as issue #338 |
 | 288 | README 'Putting it together' lifecycle section | Ideas | new | |
 | 287 | improve-arch end-state: hand off or stop at ADRs? | Q&A | new | improve-codebase-architecture area |
 | 285 | how does it compare to openspec / spec frameworks | Q&A | new | |

@@ -59,6 +59,12 @@ Create `DESIGN.md` lazily — only when the first visual convention is settled. 
 
 ## During the session
 
+### Track the design tree
+
+Keep a running outline of the branches so a long session doesn't lose its place when context compacts. Maintain a throwaway `.grill-tree.md` at the repo root: one line per branch with its status — resolved (✓) or pending — updated as you settle old branches and discover new ones. It doubles as the progress signal: when the user wonders how far along they are, the outline answers without a fake "question N of M".
+
+`.grill-tree.md` is scratch state, not a deliverable. Add it to `.gitignore`, and delete it when grilling concludes — by then every settled decision already lives in `CONTEXT.md`, `DESIGN.md`, or an ADR.
+
 ### Challenge against the glossary
 
 When the user uses a term that conflicts with the existing language in `CONTEXT.md`, call it out immediately. "Your glossary defines 'cancellation' as X, but you seem to mean Y — which is it?"
