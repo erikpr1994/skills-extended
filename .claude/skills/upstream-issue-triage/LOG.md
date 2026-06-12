@@ -123,7 +123,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
 | 293 | /grill-with-docs to state progress | Ideas | done | progress was the symptom; real gap = untracked design tree. Added `### Track the design tree` (throwaway `.grill-tree.md`) to grill-with-docs. Filed upstream as issue #338 |
 | 288 | README 'Putting it together' lifecycle section | Ideas | new | |
-| 287 | improve-arch end-state: hand off or stop at ADRs? | Q&A | new | improve-codebase-architecture area |
+| 287 | improve-arch end-state: hand off or stop at ADRs? | Q&A | watch | gap verified in fork (step 3 documented reject side effect but not accept). Patched: added accepted-candidate terminal-state bullet to SKILL.md step 3 — loop ends at design+docs; offer handoff to `/to-issues` or `/tdd`. Verdict kept `watch`: unanswered upstream Q&A, realign if Matt's intended design differs. File upstream too |
 | 285 | how does it compare to openspec / spec frameworks | Q&A | new | |
 | 275 | grill-with-docs with multilingual application | General | new | |
 | 270 | writing skills and prompts with TypeScript | Ideas | new | |
