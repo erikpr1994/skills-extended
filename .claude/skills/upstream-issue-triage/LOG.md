@@ -21,7 +21,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 221 | grill-with-docs | "One question at a time" ignored — strengthen enforcement. | ✅ applied |
 | 306 | handoff | Verify-vs-assumed discipline + resume protocol. Ships with a ready-to-pull diff. | open — review diff |
 | 299 | grill-with-docs | ADRs for unimplemented work poison `docs/adr/`. Add a lifecycle/status marker. Erik's area. | open — design |
-| 271 | write-a-skill | Reported internal contradiction. Cheap if real. | open — verify |
+| 271 | write-a-skill | Reported internal contradiction. Cheap if real. | ✅ applied (500→100 lines, all 3 refs agree) |
 
 ## Full triage
 
@@ -59,7 +59,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 286 | teach code-highlight feature | teach | watch | |
 | 274 | improve-arch worse after grill-me added | improve-codebase-architecture | watch | real regression report; relevant |
 | 272 | handoff temp-location issues on Windows | handoff | skip | we're on macOS |
-| 271 | contradiction in write-a-skill | write-a-skill | implement | open; cheap if real; verify |
+| 271 | contradiction in write-a-skill | write-a-skill | done | applied — SKILL.md:18 said 500 lines, split rule + checklist say 100; aligned to 100. File upstream too |
 | 269 | DEEPENING→LANGUAGE dependency propagation | ubiquitous-language (deprecated) | skip | deprecated skill |
 | 268 | add skills to Cursor Marketplace | Cursor | skip | platform |
 | 265 | to-issues implicit interface blockers | to-issues | watch | |
@@ -77,7 +77,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 221 | grill-with-docs one-question-at-a-time ignored | grill-with-docs | done | applied 2026-06-12 |
 | 210 | /ce-compound knowledge-codify skill | new skill | watch | |
 | 207 | GLOSSARY.md vs CONTEXT.md naming | naming | skip | discussion |
-| 200 | triage duplicate acceptance criteria | triage | watch | small bug; verify |
+| 200 | triage duplicate acceptance criteria | triage/to-issues | skip | verified: doesn't reproduce — triage keeps AC only in Agent Brief comment, to-issues only in `## Acceptance criteria`; no combined template |
 | 197 | skill orchestrator for choosing workflows | orchestrator | watch | recurring theme |
 | 196 | update installed skills when source changes | packaging | watch | relevant to fork-sync UX |
 | 188 | /visualize-architecture skill | new skill | watch | |
