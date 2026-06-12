@@ -68,7 +68,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 262 | relationship to GitHub issues | triage/to-issues | watch | |
 | 254 | sh-script skill selector | orchestrator | skip | overlaps #197/#252 |
 | 252 | skill-router skill | orchestrator | watch | |
-| 243 | remove deprecated qa mention in setup | setup-matt-pocock-skills | watch | cheap cleanup; check our copy |
+| 243 | remove deprecated qa mention in setup | setup-matt-pocock-skills | done | applied 2026-06-12; dropped `qa` from issue-tracker explainer (SKILL.md:38). Upstream #243 still OPEN (mention still on upstream/main); we patched ahead — reporter's proposed fix is 3113779 on their fork, unmerged |
 | 242 | setup scaffold a skill-usage guide | setup-matt-pocock-skills | watch | |
 | 241 | README clarify handoff parallel-branching | handoff/README | watch | |
 | 240 | grill-me jumps to implementation | grill-me | done | applied 2026-06-12 |
