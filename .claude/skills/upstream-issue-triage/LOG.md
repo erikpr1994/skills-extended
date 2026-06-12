@@ -42,7 +42,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 320 | teach Tailwind v4 CDN instead of hand CSS | teach | watch | token win; cross-session consistency |
 | 317 | teach token reduction (shared CSS + compaction) | teach | watch | overlaps #320 |
 | 316 | teach quiz answer-length tell | teach | done | fixed at teach SKILL.md:101 |
-| 312 | add .claude-plugin/marketplace.json | packaging | watch | could ease fork install; dup of #21 |
+| 312 | add .claude-plugin/marketplace.json | packaging | skip | dup of #21. Would add a native `/plugin install` path for the fork (tiny, low-conflict new file), but duplicates the documented `npx skills add erikpr1994/skills-extended` install story + a 2nd packaging file to keep in sync. Deferred 2026-06-12 — keep single install path for now |
 | 311 | grill-me no durable output artifact | grill-me | watch | parallels #337; reuse DESIGN.md idea |
 | 310 | to-issues vertical-slice completeness check | to-issues | watch | |
 | 309 | teach learning record generated with lesson | teach | watch | |
@@ -60,13 +60,13 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 290 | improve-arch HTML pages need handoff button | improve-codebase-architecture | watch | |
 | 289 | triage home for dormant defect w/ reactivation | triage | watch | relates to #139/#297 |
 | 286 | teach code-highlight feature | teach | watch | |
-| 274 | improve-arch worse after grill-me added | improve-codebase-architecture | watch | real regression report; relevant |
+| 274 | improve-arch worse after grill-me added | improve-codebase-architecture | watch | core grievance (single solution → immediate grill) already designed out in our fork: step 2 presents a candidate shotgun as HTML report then asks "Which of these would you like to explore?" (SKILL.md:71); grilling (step 3) is gated behind an explicit pick (SKILL.md:73-75). Reporter hit older upstream version. Residual grill-volume concern is model-dependent (comments split on 4.6 vs 4.8) + user can decline — not worth a patch now |
 | 272 | handoff temp-location issues on Windows | handoff | skip | we're on macOS |
 | 271 | contradiction in write-a-skill | write-a-skill | done | applied — SKILL.md:18 said 500 lines, split rule + checklist say 100; aligned to 100. File upstream too |
 | 269 | DEEPENING→LANGUAGE dependency propagation | ubiquitous-language (deprecated) | skip | deprecated skill |
 | 268 | add skills to Cursor Marketplace | Cursor | skip | platform |
 | 265 | to-issues implicit interface blockers | to-issues | watch | |
-| 263 | review jumps to fixing after review | review (in-progress) | watch | wants PR-comment mode |
+| 263 | review jumps to fixing after review | review (in-progress) | watch | "jumps to fixing" grievance is moot in our fork: our `review` draft is read-only two-axis (Standards/Spec) reporter, never edits code (SKILL.md:67-71). Inline-PR-comment want unsupported in draft, but native `/code-review --comment` already covers that workflow. Our review is in-progress/internal (unshipped) — PR-comment mode is speculative scope for now |
 | 262 | relationship to GitHub issues | triage/to-issues | watch | |
 | 254 | sh-script skill selector | orchestrator | skip | overlaps #197/#252 |
 | 252 | skill-router skill | orchestrator | watch | |
@@ -104,7 +104,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 47 | to-issues native sub-issues not body refs | to-issues | watch | |
 | 45 | enforce numbered questions per question | grill | watch | overlaps #221 |
 | 23 | "the flow" | discussion | skip | |
-| 21 | marketplace.json for plugin marketplace | packaging | watch | dup of #312 |
+| 21 | marketplace.json for plugin marketplace | packaging | skip | identical ask to #312 — deferred together 2026-06-12 (keep single `npx skills add` install path) |
 
 ## Discussions
 
@@ -124,11 +124,11 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 302 | CONTEXT-MAP.md ADRs issue? | General | new | relates to #299 |
 | 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
 | 293 | /grill-with-docs to state progress | Ideas | done | progress was the symptom; real gap = untracked design tree. Added `### Track the design tree` (throwaway `.grill-tree.md`) to grill-with-docs. Filed upstream as issue #338 |
-| 288 | README 'Putting it together' lifecycle section | Ideas | new | |
+| 288 | README 'Putting it together' lifecycle section | Ideas | watch | good idea but blocked on Matt's design answer (canonical sequence vs toolbox; where ongoing-maintenance skills sit) — proposer deliberately deferred. README is a hot, rebase-expensive upstream file; new narrative section costs drift for docs-only benefit. Skill-level seam already patched (#287); relates to #241 |
 | 287 | improve-arch end-state: hand off or stop at ADRs? | Q&A | watch | gap verified in fork (step 3 documented reject side effect but not accept). Patched: added accepted-candidate terminal-state bullet to SKILL.md step 3 — loop ends at design+docs; offer handoff to `/to-issues` or `/tdd`. Verdict kept `watch`: unanswered upstream Q&A, realign if Matt's intended design differs. File upstream too |
 | 285 | how does it compare to openspec / spec frameworks | Q&A | new | |
 | 275 | grill-with-docs with multilingual application | General | new | |
-| 270 | writing skills and prompts with TypeScript | Ideas | new | |
+| 270 | writing skills and prompts with TypeScript | Ideas | skip | external tool promotion (mantiq — github.com/webNeat/mantiq): author's own CLI+skill for prompts-as-TypeScript. No concrete change to a skill we ship; prompts-as-code cuts against the repo's model-agnostic markdown-skill design |
 | 267 | featured on Locally Hosted (video) | Show and tell | new | |
 | 261 | proposal: codehealth-mcp skill | Ideas | new | |
 | 259 | what mode should I run grill-me in? | Q&A | skip | answered Q&A; grill-me is a mode-agnostic prep instruction — no fork change |
