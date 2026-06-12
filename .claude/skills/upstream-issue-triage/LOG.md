@@ -133,7 +133,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 267 | featured on Locally Hosted (video) | Show and tell | new | |
 | 261 | proposal: codehealth-mcp skill | Ideas | new | |
 | 259 | what mode should I run grill-me in? | Q&A | skip | answered Q&A; grill-me is a mode-agnostic prep instruction — no fork change |
-| 257 | can /superpowers be complementary? | General | new | |
+| 257 | can /superpowers be complementary? | General | skip | opinion/experience thread on combining external Superpowers plugin with these skills; no repro, no proposed change to a skill we ship. Superpowers is a plugin we don't ship. The one transferable insight (overlapping skills auto-triggering/stepping on each other) is already tracked under the orchestrator `watch` cluster (#197/#252/#162/#80 NP). Even upstream owner's takeaway was "turn the other one off" — no design action implied |
 | 256 | explore code with subagent in /grill-me | Ideas | done | line 10 already explored-instead-of-asked; added "prefer a subagent so exploration doesn't clutter this conversation" (portable, no Explore hardcode). File upstream too |
 | 255 | GitHub Copilot as a supported agent | General | new | platform; likely skip |
 | 248 | anyone tried Claude's rules feature? | Q&A | new | |
@@ -344,7 +344,7 @@ selectable in Flow 2, and Flow 1 keeps them current.
 | 84 | NP | PRD: Notification System | demo PRD | new | generated example |
 | 83 | NP | PRD: Notification System (dup) | demo PRD | new | generated example |
 | 82 | NP | Feature: RBAC for workspace members | demo PRD | new | generated example |
-| 80 | NP | separate content skills from backlog (/github) | orchestrator/packaging | new | architecture idea Matt declined; relates #197/#252 |
+| 80 | NP | separate content skills from backlog (/github) | orchestrator/packaging | skip | large refactor Matt declined; superseded upstream by a different design. The cheap half we already inherited via rebase: `github-triage`→`triage` rename done, no inline `gh issue create` in to-prd/to-issues. The expensive half — a `/github` integration skill exposing publishPRD/publishIssues/applyTriageOutcome as a backend contract (future linear/beads impl same) — was declined; upstream met the portability goal via pluggable issue-tracker-* setup skills instead (#98/#177/#253/#136/#116). Rebuilding the abstraction = large high-conflict fork divergence vs "keep the diff small." Backend-abstraction theme stays tracked under orchestrator `watch` (#197/#252) |
 | 44 | NP | Codex asked 200 questions | grill | new | question-volume grievance addressed in fork via #221/#240/#45 |
 | 20 | NP | health score influenced by match info | unclear | new | noise |
 | 15 | NP | "what bullsh*t" | — | new | noise |
