@@ -1,13 +1,18 @@
 ---
 name: upstream-issue-triage
 description: Triage open issues on the upstream mattpocock/skills repo against our fork, recording a verdict for each so we never re-analyse the same issue twice. Use when the user wants to review upstream issues, find patches to pull into the fork, or sync the issue triage log.
+metadata:
+  internal: true
 ---
 
 # Upstream issue triage
 
 Repo-only skill. It lives in this repo's `.claude/skills/` so Claude Code auto-loads
-it whenever you work in skills-extended — but it is **not** in `plugin.json`'s `skills`
-array, so `npx skills` never ships it to other projects. It keeps [`LOG.md`](./LOG.md)
+it whenever you work in skills-extended. It is kept out of `plugin.json`'s `skills`
+array **and** marked `metadata.internal: true` in its frontmatter — the `skills` CLI
+scans `.claude/skills/` directly, so the manifest omission alone is not enough; the
+`internal` flag is what hides it from `npx skills add` (it stays installable only with
+`INSTALL_INTERNAL_SKILLS=1`). It keeps [`LOG.md`](./LOG.md)
 — the durable record of every upstream issue and discussion we've already looked at
 and what we decided. The point is **incremental**: each run only triages items not
 already in the log, so the work compounds instead of repeating.

@@ -24,6 +24,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 299 | grill-with-docs | ADRs for unimplemented work poison `docs/adr/`. Add a lifecycle/status marker. Erik's area. | open — design |
 | 271 | write-a-skill | Reported internal contradiction. Cheap if real. | ✅ applied (500→100 lines, all 3 refs agree) |
 | 303 | improve-codebase-architecture | Add progressive-disclosure-of-implementation lens. Fills the AI-navigability gap the skill already advertises. | ✅ applied (LANGUAGE.md principle + SKILL.md explore prompt/benefit) |
+| 296 | teach | Tree/hierarchy diagrams mix ASCII chars with inline HTML → alignment breaks in proportional fonts. Real repro w/ screenshot. | ✅ applied (semantic-HTML guidance line in Lessons) |
 
 ## Full triage
 
@@ -53,7 +54,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 299 | grill-with-docs ADRs for unimplemented work | grill-with-docs | implement | open; needs status/lifecycle marker |
 | 298 | canonical-name label sets need no mapping | setup/triage | skip | niche |
 | 297 | deferred state role for trigger-gated work | triage | watch | relates to #139/#289 |
-| 296 | teach tree/hierarchy diagrams in explainers | teach | watch | |
+| 296 | teach tree/hierarchy diagrams in explainers | teach | done | applied 2026-06-12; added a tree/hierarchy guidance line to teach Lessons section (semantic nested-list HTML, not ASCII; if ASCII, wrap in `<pre><code>`, never mix tree chars with inline styling). Real repro w/ screenshot upstream. Upstream #296 still OPEN — file there too |
 | 294 | grill-with-docs docs location outside worktree | grill-with-docs | watch | cross-worktree; Erik's area |
 | 292 | to-issues parent pickable after decomposition | to-issues | watch | |
 | 290 | improve-arch HTML pages need handoff button | improve-codebase-architecture | watch | |
@@ -130,7 +131,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 270 | writing skills and prompts with TypeScript | Ideas | new | |
 | 267 | featured on Locally Hosted (video) | Show and tell | new | |
 | 261 | proposal: codehealth-mcp skill | Ideas | new | |
-| 259 | what mode should I run grill-me in? | Q&A | new | |
+| 259 | what mode should I run grill-me in? | Q&A | skip | answered Q&A; grill-me is a mode-agnostic prep instruction — no fork change |
 | 257 | can /superpowers be complementary? | General | new | |
 | 256 | explore code with subagent in /grill-me | Ideas | done | line 10 already explored-instead-of-asked; added "prefer a subagent so exploration doesn't clutter this conversation" (portable, no Explore hardcode). File upstream too |
 | 255 | GitHub Copilot as a supported agent | General | new | platform; likely skip |
