@@ -49,3 +49,5 @@ Every skill in `engineering/`, `productivity/`, or `misc/` must have a reference
 Each skill entry in the top-level `README.md` must link the skill name to its `SKILL.md`.
 
 Each bucket folder has a `README.md` that lists every skill in the bucket with a one-line description, with the skill name linked to its `SKILL.md`.
+
+**Match Matt's voice when editing skills.** Skill prose is terse — short sections, often 1-3 sentences, no preamble or restated rationale. When adding to a skill, write the minimum that conveys the instruction and mirror the density of the surrounding sections. Don't bloat skills.

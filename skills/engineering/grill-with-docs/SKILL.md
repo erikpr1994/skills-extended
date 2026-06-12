@@ -69,6 +69,10 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible — which is right?"
 
+### Prototype UI decisions, don't describe them
+
+When a question is spatial — layout, control placement, flow, visual hierarchy, modal-vs-page — text is a poor medium. Generate a minimal throwaway HTML mockup with 2+ variants side by side and let the user react. Delegate the file to a sub-agent so the grilling thread stays focused, then resume with one question: "which variant?" Capture the choice into `CONTEXT.md` or an ADR like any other answer, then delete the mockup. For a richer interactive comparison, hand off to [`prototype`](../prototype/SKILL.md).
+
 ### Update CONTEXT.md inline
 
 When a term is resolved, update `CONTEXT.md` right there. Don't batch these up — capture them as they happen. Use the format in [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md).
