@@ -68,6 +68,16 @@ The workspace has a single entry point: `index.html` at the root — a **mobile-
 
 Lessons and the dashboard are plain HTML, so they open in any browser. To review on a phone, serve the workspace directory with any static server (e.g. `python -m http.server`) and open it over the local network, or through a secure tunnel such as Tailscale or Cloudflare Tunnel for access from anywhere. Always point the learner at `index.html` as the home page.
 
+## Styling HTML outputs
+
+Style every HTML output — lessons, the dashboard, and reference documents — with the Tailwind v4 Play CDN rather than a hand-written `<style>` block. Tailwind's utility vocabulary is already in your training data, so you stop re-inventing an ad-hoc design system each session and drifting on colours, spacing, and radii across a multi-lesson course — and each file stays far lighter.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+```
+
+Put any custom theming in a `<style type="text/tailwindcss">` block. The CDN is a single script tag with no build step, but it needs the network to load — for a file the learner must read fully offline, inline the CSS instead.
+
 ## The Mission
 
 Every lesson should be tied into the mission - the reason that the user is interested in learning about the topic.

@@ -26,6 +26,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 271 | write-a-skill | Reported internal contradiction. Cheap if real. | ✅ applied (500→100 lines, all 3 refs agree) |
 | 303 | improve-codebase-architecture | Add progressive-disclosure-of-implementation lens. Fills the AI-navigability gap the skill already advertises. | ✅ applied (LANGUAGE.md principle + SKILL.md explore prompt/benefit) |
 | 296 | teach | Tree/hierarchy diagrams mix ASCII chars with inline HTML → alignment breaks in proportional fonts. Real repro w/ screenshot. | ✅ applied (semantic-HTML guidance line in Lessons) |
+| 320 | teach | Hand-written `<style>` block per lesson burns tokens + drifts across sessions. Tailwind v4 Play CDN instead. | ✅ applied (`## Styling HTML outputs` covers all HTML outputs; reconciled DASHBOARD-FORMAT) |
 
 ## Full triage
 
@@ -40,7 +41,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 324 | coordinating multiple team members | discussion | skip | no concrete skill change |
 | 323 | prd-to-issues configurable detail level | to-prd/to-issues | watch | cost-control knob |
 | 321 | bounded-context CONTEXT.md sub-domains | grill-with-docs | watch | open question |
-| 320 | teach Tailwind v4 CDN instead of hand CSS | teach | watch | token win; cross-session consistency |
+| 320 | teach Tailwind v4 CDN instead of hand CSS | teach | done | applied 2026-06-12; added `## Styling HTML outputs` to teach SKILL.md — Tailwind v4 Play CDN (`@tailwindcss/browser@4`) as default for all HTML outputs (lessons + dashboard + reference, not just lessons, since DASHBOARD-FORMAT.md:23 requires the dashboard to match the lessons) instead of a hand-written `<style>` block; custom theming via `<style type="text/tailwindcss">`. Noted the one tradeoff the issue omits: CDN needs network to load → inline CSS for guaranteed-offline files. Reconciled DASHBOARD-FORMAT.md:22 ("Inline the CSS" → "Style it like the lessons") so the two no longer contradict. Docs-only/additive, no manifest change. Overlaps #317 (shared CSS + compaction — Tailwind covers the consistency half). Upstream #320 still OPEN — file/comment there too |
 | 317 | teach token reduction (shared CSS + compaction) | teach | watch | overlaps #320 |
 | 316 | teach quiz answer-length tell | teach | done | fixed at teach SKILL.md:101 |
 | 312 | add .claude-plugin/marketplace.json | packaging | skip | dup of #21. Would add a native `/plugin install` path for the fork (tiny, low-conflict new file), but duplicates the documented `npx skills add erikpr1994/skills-extended` install story + a 2nd packaging file to keep in sync. Deferred 2026-06-12 — keep single install path for now |
@@ -122,7 +123,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 314 | /teach need knowledge/reference setup? | Q&A | new | |
 | 313 | /teach: some related, complementary skills | Ideas | skip | recommends installing external DrCatHicks learning-science skills (/learning-goal, /learning-opportunities, /orient) alongside /teach — not a change to a skill we ship. No repro, no concrete /teach edit proposed. Vendoring third-party skills isn't this fork's job. /orient conceptually overlaps grill-with-docs/improve-arch but is separate. If teach gets revisited, their goal-setting/spaced-opportunity ideas could inspire a tweak, but nothing actionable now |
 | 304 | naming grill-with-docs skill | General | new | |
-| 302 | CONTEXT-MAP.md ADRs issue? | General | new | relates to #299 |
+| 302 | CONTEXT-MAP.md ADRs issue? | General | skip | single unanswered General Q, no comments/repro. Asks whether context-scoped ADRs should live at `docs/adr/<context>/` (centralize-and-namespace) instead of `src/<context>/docs/adr/` (current, at domain.md:9,35 + grill-with-docs SKILL.md:46). Current layout is a deliberate, self-consistent colocation choice — each context is a self-contained module so `src/<context>/CONTEXT.md` sits next to its code and ADRs colocate alongside; system-wide ADRs stay at root `docs/adr/`. Reporter's alt is taste, not a defect. Genuine layout-philosophy call that's upstream's to answer; forking it = pure rebase drift for zero functional gain. Skip. Relates to #299 (ADR lifecycle/status markers — a different real gap that stands alone) |
 | 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
 | 293 | /grill-with-docs to state progress | Ideas | done | progress was the symptom; real gap = untracked design tree. Added `### Track the design tree` (throwaway `.grill-tree.md`) to grill-with-docs. Filed upstream as issue #338 |
 | 288 | README 'Putting it together' lifecycle section | Ideas | watch | good idea but blocked on Matt's design answer (canonical sequence vs toolbox; where ongoing-maintenance skills sit) — proposer deliberately deferred. README is a hot, rebase-expensive upstream file; new narrative section costs drift for docs-only benefit. Skill-level seam already patched (#287); relates to #241 |

@@ -19,7 +19,7 @@
 ## Rules
 
 - **Mobile-first.** Single column, width constrained (~600px) so it also reads well on desktop. Tap targets at least ~44px tall, with generous spacing. Include `<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">` and respect safe-area insets.
-- **Self-contained.** Inline the CSS, no build step — one HTML file that opens anywhere, and prints cleanly.
+- **One file, no build step.** Style it like the lessons so it opens in any browser and prints cleanly.
 - **Visually consistent with the lessons.** Reuse the same palette and typography so the course feels like one product, not a pile of pages.
 - **Link to HTML, not raw Markdown.** A phone browser renders a `.md` file as plain text. Surface the mission or glossary as HTML (e.g. a glossary reference document), or inline their essence — don't link `MISSION.md` / `GLOSSARY.md` directly from something opened on a phone.
 - **One dashboard per workspace.** It is the root `index.html`; every other artifact hangs off it.
