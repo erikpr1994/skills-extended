@@ -1,6 +1,6 @@
 ---
 name: grill-with-docs
-description: Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.
+description: Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, DESIGN.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.
 ---
 
 <what-to-do>
@@ -51,6 +51,12 @@ If a `CONTEXT-MAP.md` exists at the root, the repo has multiple contexts. The ma
 
 Create files lazily — only when you have something to write. If no `CONTEXT.md` exists, create one when the first term is resolved. If no `docs/adr/` exists, create it when the first ADR is needed.
 
+## Design awareness
+
+If the plan touches UI, the visual system has its own glossary: `DESIGN.md`. It is to design what `CONTEXT.md` is to the domain — the settled conventions (color, type, spacing, component inventory, layout patterns), not the reasoning behind them. During exploration, read it if present and challenge the plan against it the same way you do `CONTEXT.md`.
+
+Create `DESIGN.md` lazily — only when the first visual convention is settled. If the repo already keeps a design-system doc, update that instead of inventing your own. Use the format in [DESIGN-FORMAT.md](./DESIGN-FORMAT.md). Keep it to settled conventions — the *why* behind a hard visual decision goes in an ADR, not here.
+
 ## During the session
 
 ### Challenge against the glossary
@@ -71,7 +77,14 @@ When the user states how something works, check whether the code agrees. If you 
 
 ### Prototype UI decisions, don't describe them
 
-When a question is spatial — layout, control placement, flow, visual hierarchy, modal-vs-page — text is a poor medium. Generate a minimal throwaway HTML mockup with 2+ variants side by side and let the user react. Delegate the file to a sub-agent so the grilling thread stays focused, then resume with one question: "which variant?" Capture the choice into `CONTEXT.md` or an ADR like any other answer, then delete the mockup. For a richer interactive comparison, hand off to [`prototype`](../prototype/SKILL.md).
+When a question is spatial — layout, control placement, flow, visual hierarchy, modal-vs-page — text is a poor medium. Generate a minimal throwaway HTML mockup with 2+ variants side by side and let the user react. Delegate the file to a sub-agent so the grilling thread stays focused, then resume with one question: "which variant?" For a richer interactive comparison, hand off to [`prototype`](../prototype/SKILL.md).
+
+Capture the choice before deleting the mockup — it doesn't go in `CONTEXT.md`, which is a glossary, not a design log:
+
+- The **settled convention** goes in `DESIGN.md` ("primary actions live in a sticky bottom bar"), like any resolved term.
+- If the choice was a real trade-off worth an ADR, record the *why* there — and paste a screenshot or the variant markup into it first, so the rejected options survive the mockup's deletion.
+
+Then delete the mockup.
 
 ### Update CONTEXT.md inline
 
