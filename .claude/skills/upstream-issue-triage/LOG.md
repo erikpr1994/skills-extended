@@ -20,7 +20,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 335 | teach | Correct answer always same position (A). Vary position + plausible distractors. | ✅ applied |
 | 240 | grill-me | Agent jumps to implementation when questions run out. Stop + ask for next step. | ✅ applied |
 | 221 | grill-with-docs | "One question at a time" ignored — strengthen enforcement. | ✅ applied |
-| 306 | handoff | Verify-vs-assumed discipline + resume protocol. Ships with a ready-to-pull diff. | open — review diff |
+| 306 | handoff | Verify-vs-assumed discipline + resume protocol. Ships with a ready-to-pull diff. | ✅ applied (adapted — guarded git/gh block + split into handoff/resume-handoff) |
 | 299 | grill-with-docs | ADRs for unimplemented work poison `docs/adr/`. Add a lifecycle/status marker. Erik's area. | open — design |
 | 271 | write-a-skill | Reported internal contradiction. Cheap if real. | ✅ applied (500→100 lines, all 3 refs agree) |
 | 303 | improve-codebase-architecture | Add progressive-disclosure-of-implementation lens. Fills the AI-navigability gap the skill already advertises. | ✅ applied (LANGUAGE.md principle + SKILL.md explore prompt/benefit) |
@@ -48,7 +48,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 309 | teach learning record generated with lesson | teach | watch | |
 | 308 | grill-me-with-options for Copilot/VS Code | Copilot | skip | platform we don't use |
 | 307 | documentation review & alignment skill | new skill | watch | |
-| 306 | handoff verify-vs-assumed + resume protocol | handoff | implement | open; ready diff in issue |
+| 306 | handoff verify-vs-assumed + resume protocol | handoff + resume-handoff | done | applied 2026-06-12; adapted contributor diff (nbost130 branch), not verbatim. Two changes vs upstream: (1) guarded the git/gh state-capture block for non-repo handoffs ("what's deployed/running/open"), since our handoff was tool-agnostic; (2) split write vs resume into TWO skills — handoff (write, the tagging discipline) + new resume-handoff (read: drift-check, re-probe [UNVERIFIED], read source of truth). Erik's call: distinct entry points for the two jobs. Diverges structurally from upstream's single-file #306 → higher rebase cost accepted. New skill wired into README + bucket README + plugin.json. Upstream #306 still OPEN (it IS the issue); our split is fork-specific, not for upstream |
 | 303 | progressive-disclosure architecture lens | improve-codebase-architecture | done | applied 2026-06-12; added principle to LANGUAGE.md (framed complementary to "depth is a property of the interface" — internal disclosure for maintainers/agents, guarded by deletion test), explore prompt + benefit term to SKILL.md. Upstream #303 still OPEN/unanswered — file there too |
 | 301 | block-dangerous-git bypassed by git global opts | git-guardrails | done | applied 2026-06-12; repro tests pass |
 | 299 | grill-with-docs ADRs for unimplemented work | grill-with-docs | implement | open; needs status/lifecycle marker |
@@ -136,7 +136,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 256 | explore code with subagent in /grill-me | Ideas | done | line 10 already explored-instead-of-asked; added "prefer a subagent so exploration doesn't clutter this conversation" (portable, no Explore hardcode). File upstream too |
 | 255 | GitHub Copilot as a supported agent | General | new | platform; likely skip |
 | 248 | anyone tried Claude's rules feature? | Q&A | new | |
-| 246 | /write-a-skill vs Anthropic's /skill-creator | General | new | |
+| 246 | /write-a-skill vs Anthropic's /skill-creator | General | skip | opinion thread, no comments/repro/proposed change. Asks Matt why he wrote his own vs Anthropic's heavier skill-creator (bundles /agents, /scripts). Our write-a-skill already covers scripts + reference files (SKILL.md steps 1-2); Anthropic's skill-creator is separately installable for anyone wanting the heavier tool. Adopting its architecture cuts against the repo's minimal-markdown-skill design |
 | 239 | using curated subsets of skills from plugin | Ideas | new | |
 | 236 | nightshift: autonomous to-prd→to-issues layer | Show and tell | new | |
 | 231 | how to manage high-level roadmaps? | Q&A | new | |
