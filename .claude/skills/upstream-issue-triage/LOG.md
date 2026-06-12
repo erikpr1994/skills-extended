@@ -23,6 +23,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 306 | handoff | Verify-vs-assumed discipline + resume protocol. Ships with a ready-to-pull diff. | open — review diff |
 | 299 | grill-with-docs | ADRs for unimplemented work poison `docs/adr/`. Add a lifecycle/status marker. Erik's area. | open — design |
 | 271 | write-a-skill | Reported internal contradiction. Cheap if real. | ✅ applied (500→100 lines, all 3 refs agree) |
+| 303 | improve-codebase-architecture | Add progressive-disclosure-of-implementation lens. Fills the AI-navigability gap the skill already advertises. | ✅ applied (LANGUAGE.md principle + SKILL.md explore prompt/benefit) |
 
 ## Full triage
 
@@ -47,7 +48,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 308 | grill-me-with-options for Copilot/VS Code | Copilot | skip | platform we don't use |
 | 307 | documentation review & alignment skill | new skill | watch | |
 | 306 | handoff verify-vs-assumed + resume protocol | handoff | implement | open; ready diff in issue |
-| 303 | progressive-disclosure architecture lens | improve-codebase-architecture | watch | |
+| 303 | progressive-disclosure architecture lens | improve-codebase-architecture | done | applied 2026-06-12; added principle to LANGUAGE.md (framed complementary to "depth is a property of the interface" — internal disclosure for maintainers/agents, guarded by deletion test), explore prompt + benefit term to SKILL.md. Upstream #303 still OPEN/unanswered — file there too |
 | 301 | block-dangerous-git bypassed by git global opts | git-guardrails | done | applied 2026-06-12; repro tests pass |
 | 299 | grill-with-docs ADRs for unimplemented work | grill-with-docs | implement | open; needs status/lifecycle marker |
 | 298 | canonical-name label sets need no mapping | setup/triage | skip | niche |

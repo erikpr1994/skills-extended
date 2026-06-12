@@ -34,6 +34,7 @@ What maintainers get from depth. Change, bugs, knowledge, and verification conce
 ## Principles
 
 - **Depth is a property of the interface, not the implementation.** A deep module can be internally composed of small, mockable, swappable parts — they just aren't part of the interface. A module can have **internal seams** (private to its implementation, used by its own tests) as well as the **external seam** at its interface.
+- **Implementation depth should disclose progressively too.** Interface depth serves callers; this serves maintainers and agents. A deep module's top-level implementation should read as domain flow — purpose, invariants, error modes, high-level phases — with low-level mechanics sitting behind internal names or modules opened deliberately. File size isn't the rule, but a large file is a smell when it forces you to absorb mechanics before the flow. The **deletion test** still guards the split: an internal file must hide complexity or concentrate knowledge, not just add pass-through indirection.
 - **The deletion test.** Imagine deleting the module. If complexity vanishes, the module wasn't hiding anything (it was a pass-through). If complexity reappears across N callers, the module was earning its keep.
 - **The interface is the test surface.** Callers and tests cross the same seam. If you want to test *past* the interface, the module is probably the wrong shape.
 - **One adapter means a hypothetical seam. Two adapters means a real one.** Don't introduce a seam unless something actually varies across it.

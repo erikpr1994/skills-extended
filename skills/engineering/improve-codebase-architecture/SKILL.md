@@ -38,6 +38,7 @@ Then use the Agent tool with `subagent_type=Explore` to walk the codebase. Don't
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow** — interface nearly as complex as the implementation?
+- Where is a module deep at its interface but hard to *enter* — the implementation forces you through low-level mechanics before the domain flow, invariants, or error modes are clear?
 - Where have pure functions been extracted just for testability, but the real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
 - Which parts of the codebase are untested, or hard to test through their current interface?
@@ -55,7 +56,7 @@ For each candidate, the same template as before, but rendered as a card:
 - **Files** — which files/modules are involved
 - **Problem** — why the current architecture is causing friction
 - **Solution** — plain English description of what would change
-- **Benefits** — explained in terms of locality and leverage, and how tests would improve
+- **Benefits** — explained in terms of locality, leverage, and progressive disclosure (how much easier the module is to enter for maintainers and agents), and how tests would improve
 - **Before / After diagram** — side-by-side, custom-drawn, illustrating the shallowness and the deepening
 - **Recommendation strength** — one of `Strong`, `Worth exploring`, `Speculative`, rendered as a badge
 
