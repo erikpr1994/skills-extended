@@ -5,9 +5,10 @@ we never re-triage the same item. Maintained by the [`upstream-issue-triage`](./
 skill (Flow 1 syncs new items as `new`; Flow 2 reviews one unresolved item).
 Verdicts: **new** · **done** · **implement** · **watch** · **skip**. Resolved =
 `done`/`skip`; unresolved (still in the backlog) = `new`/`implement`/`watch`.
-Issues live in `## Full triage`; discussions in `## Discussions`.
+Open issues live in `## Full triage`; discussions in `## Discussions`; closed issues
+in `## Closed upstream` (synced as `new` so each is decided in Flow 2, not pre-judged).
 
-**Last synced:** issues #337, discussions #333 — 2026-06-12
+**Last synced:** open issues #337, discussions #333, closed issues swept through #334 — 2026-06-12
 
 ## Implement candidates
 
@@ -144,3 +145,206 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 225 | how do you work across multiple repos? | General | new | |
 | 217 | PRD lifecycle after all issues implemented | General | new | |
 | 214 | Welcome to Discussions! | Announcements | new | skip on review |
+
+## Closed upstream
+
+Closed `mattpocock/skills` issues, swept exhaustively so we never wonder "did we miss
+a good closed one." **Reason** is the GitHub close reason: `C` = COMPLETED (Matt shipped
+it), `NP` = NOT_PLANNED (Matt declined). The **Note** is factual context only — close
+reason, whether it likely arrives via `git rebase upstream/main`, duplicates, area — to
+speed your decision; it is **not** a verdict.
+
+Every closed row syncs as `new` so you decide each yourself in Flow 2 — nothing here is
+pre-judged. Seeded as a one-time full sweep 2026-06-12 (188 items); these rows ARE
+selectable in Flow 2, and Flow 1 keeps them current.
+
+| # | R | Title (short) | Skill / area | Verdict | Note |
+|---|---|---|---|---|---|
+| 334 | C | Re-enable "discovering new skill" | packaging | new | shipped upstream (rebase) |
+| 330 | C | how to update synced skills (npx) | packaging | new | usage Q; answered upstream |
+| 327 | C | grill-me decision tree + adversarial + summary | grill-me | new | shipped upstream; our grill-me patched via #240 |
+| 326 | C | teach quiz feature request | teach | new | shipped upstream (rebase) |
+| 325 | C | token-optimized `-condensed` skill variants | packaging/all | new | relates #320/#317 teach-token; revisit for fork take |
+| 319 | C | PRD: Skill Trace 引擎 | demo PRD | new | generated/demo PRD |
+| 318 | C | install command unusable UI | packaging | new | shipped upstream (rebase) |
+| 305 | C | support persisted design decisions | grill-with-docs | new | shipped upstream; relates our #306/#293 design-tree |
+| 295 | C | add AskQuestion tool | grill | new | shipped upstream (rebase) |
+| 284 | C | grill-with-docs output frequency | grill-with-docs | new | shipped upstream; our #221 covers |
+| 283 | C | policy: no verify/check mode for setup | setup | new | upstream policy decision |
+| 282 | C | policy: no hard question limits grilling | grill | new | upstream policy; aligns our #45/#221 |
+| 281 | C | policy: issue trackers mainstream only | triage/to-issues | new | upstream policy |
+| 280 | C | ship /writing-shape | writing | new | shipped upstream (rebase) |
+| 279 | C | ship /writing-fragments | writing | new | shipped upstream (rebase) |
+| 278 | C | ship /writing-beats | writing | new | shipped upstream (rebase) |
+| 277 | C | ship /teach | teach | new | shipped upstream (we ship it) |
+| 276 | C | ship /review | review | new | shipped upstream (rebase) |
+| 273 | C | improve-arch mention severity | improve-codebase-architecture | new | shipped upstream (rebase) |
+| 266 | C | grill-with-docs CONTEXT-FORMAT Rules stale | grill-with-docs | new | shipped upstream (rebase) |
+| 264 | C | takeover skill (mirrors handoff) | handoff | new | relates our handoff/resume-handoff split; revisit for fork take |
+| 260 | C | codehealth-mcp skill | MCP | new | MCP tool we don't ship (open dup #261 watch) |
+| 253 | C | add BitBucket git host | setup | new | shipped upstream (rebase) |
+| 251 | C | antigravity harness support | platform | new | platform we don't use |
+| 250 | C | grill-with-context use most capable model | grill-with-docs | new | shipped upstream (rebase) |
+| 249 | C | grill-me-store-decisions persists decision tree | grill-me | new | relates our #306/#293/#311; revisit for fork take |
+| 247 | C | severity of grill-me/grill-with-docs | grill | new | shipped upstream (rebase) |
+| 245 | C | dedicated /code-review skill | review | new | shipped upstream; native /code-review covers (#114/#263) |
+| 244 | C | grill-with-docs challenge premise first | grill-with-docs | new | shipped upstream (rebase) |
+| 237 | C | /domain-model referenced in docs | docs | new | shipped upstream (rebase) |
+| 234 | C | Kiro IDE symlink copies | platform | new | platform we don't use |
+| 233 | C | feedback/analytics for skills | meta | new | discussion; nothing to ship |
+| 232 | C | improve-arch continues implementation | improve-codebase-architecture | new | shipped upstream; our #274 verified designed-out |
+| 230 | C | to-issues GH CLI problem | to-issues | new | shipped upstream (rebase) |
+| 228 | C | custom link dir for other agents | packaging | new | shipped upstream (rebase) |
+| 227 | C | change how to deal with old issue | unclear | new | unclear/noise |
+| 224 | C | technical design docs in AI workflow | discussion | new | dup of disc #226 |
+| 223 | C | . | — | new | noise |
+| 222 | C | typo README ticks→tickets | README | new | shipped upstream (rebase) |
+| 220 | C | stealth install option for setup | setup | new | shipped upstream (rebase) |
+| 219 | C | formatting for the grill | grill | new | shipped upstream (rebase) |
+| 218 | C | PRD: sub-pi agent dispatch & worktree | demo PRD | new | generated/demo PRD |
+| 216 | C | link-skills.sh readlink -f macOS | packaging | new | shipped upstream (rebase) |
+| 215 | C | handoff empty temp file Windows | handoff | new | Windows; our #272 skip (macOS) |
+| 213 | C | enable Discussions | meta | new | repo admin |
+| 212 | C | PRD lifecycle after issues | discussion | new | dup disc #217 |
+| 211 | C | mktemp XXXXXX placeholder | handoff | new | shipped upstream (rebase) |
+| 209 | C | Meldefrist in Admin-Tabelle | — | new | noise (no context) |
+| 208 | C | grill-me remove codebase-specific guidance | grill-me | new | shipped upstream (rebase) |
+| 206 | C | update deprecated mktemp in handoff | handoff | new | shipped upstream (rebase) |
+| 205 | C | to-issues without triage artifacts | to-issues | new | shipped upstream (rebase) |
+| 204 | C | add skills to existing repo | packaging | new | usage Q |
+| 203 | C | CLI-backed local issue tracker | triage/to-issues | new | shipped upstream (rebase) |
+| 202 | C | Co-Work env / other harnesses | platform | new | platform |
+| 201 | C | handoff skill suggestion | handoff | new | shipped upstream (rebase) |
+| 199 | C | grill-with-docs default English | grill-with-docs | new | shipped upstream (rebase) |
+| 198 | C | grill-with-docs default English (dup) | grill-with-docs | new | dup of 199 |
+| 195 | C | function/where applied | Q | new | usage Q |
+| 194 | C | cli doesn't recognize skills | support | new | support |
+| 193 | C | some security issues to check | security | new | shipped upstream (rebase) |
+| 192 | C | grill-me use askUserQuestion | grill-me | new | shipped upstream (rebase) |
+| 191 | C | /mainline git-native intent memory | new skill | new | shipped/declined upstream (rebase) |
+| 190 | C | CONTEXT.md grows too large | grill-with-docs | new | shipped upstream; relates our #293 tree |
+| 189 | C | caveman wenyan intensity levels | caveman | new | skill we don't promote |
+| 187 | C | handoff flagged high risk by synk | handoff | new | scanner false positive |
+| 186 | C | handoff loses load-bearing decisions | handoff | new | shipped upstream; our #306 covers |
+| 185 | C | grill-with-docs reach for askUserQuestion | grill-with-docs | new | shipped upstream (rebase) |
+| 184 | C | gh auth token | support | new | support |
+| 183 | C | ctx recommendation integration | orchestrator | new | shipped/declined; relates #197 |
+| 182 | C | grill-with-docs alignment before questions | grill-with-docs | new | shipped upstream (rebase) |
+| 181 | C | /extract-context skill | new skill | new | shipped upstream (rebase) |
+| 179 | C | ISO 8601 file names | handoff/naming | new | shipped upstream (rebase) |
+| 178 | C | Codex version? | platform | new | platform |
+| 177 | C | Gitea issue-tracker support | setup | new | shipped upstream (rebase) |
+| 176 | C | community translations README | README | new | shipped upstream (rebase) |
+| 175 | C | mktemp BSD macOS | handoff | new | shipped upstream (rebase) |
+| 174 | C | .claude folder missing fresh install | packaging | new | shipped upstream (rebase) |
+| 173 | C | slices: main agent or subagents | tdd/to-issues | new | shipped upstream (rebase) |
+| 172 | C | descriptive handoff filenames | handoff | new | shipped upstream (rebase) |
+| 171 | C | secret redaction handoff | handoff | new | shipped upstream (rebase) |
+| 169 | C | dedicated prd label | to-prd | new | shipped upstream (rebase) |
+| 168 | C | grill-with-docs prevent AskUserQuestion | grill-with-docs | new | shipped upstream (rebase) |
+| 167 | C | docs refine prototype wording | docs | new | shipped upstream (rebase) |
+| 166 | C | domain-model missing from package | packaging | new | deprecated skill |
+| 165 | C | grill-with-docs + copilot graph api | platform | new | platform |
+| 164 | C | 4 misc skills missing from plugin.json | packaging | new | shipped upstream; our plugin.json maintained |
+| 161 | C | Defender malicious report | security | new | false positive |
+| 160 | C | Disregard: Error | — | new | noise |
+| 159 | C | skills-manifest + per-skill CHANGELOG | packaging | new | shipped/declined upstream |
+| 158 | C | /verify skill pre-commit | verify | new | shipped upstream (we have verify) |
+| 157 | C | caveman output style vs skill | caveman | new | skill we don't promote |
+| 156 | C | to-prd not apply ready-for-agent | to-prd | new | shipped upstream (rebase) |
+| 155 | C | grill with docs output as file | grill-with-docs | new | shipped upstream; relates our #337/#293 |
+| 154 | C | prime AGENTS.md/CLAUDE.md re CONTEXT.md | grill-with-docs | new | shipped upstream (rebase) |
+| 153 | C | grill-me/grill-with-docs open-ended | grill | new | shipped upstream (rebase) |
+| 152 | C | tech debt | — | new | noise |
+| 151 | C | idea | — | new | noise |
+| 150 | C | grep flag parsing `--` patterns | tooling | new | shipped upstream (rebase) |
+| 149 | C | prevent grill-with-docs askUserQuestion | grill-with-docs | new | dup of 168 |
+| 148 | C | priority-score to-prd/to-issues | to-prd/to-issues | new | shipped upstream (rebase) |
+| 146 | C | .agent folder windows | platform | new | platform |
+| 144 | C | caveman internal monologue | caveman | new | skill we don't promote |
+| 143 | C | review skills - here's what i got | feedback | new | feedback thread |
+| 142 | C | gh CLI command-shape in setup | setup | new | shipped upstream; our #243 area |
+| 141 | C | managed dotfiles symlink | packaging | new | shipped upstream (rebase) |
+| 140 | C | wrong dest dir installing Claude Code | packaging | new | shipped upstream (rebase) |
+| 136 | C | issue-tracker-gitlab `--state` invalid | setup | new | shipped upstream (rebase) |
+| 134 | C | grill-with-docs implements after grill | grill-with-docs | new | shipped upstream; our #221/#240 cover |
+| 131 | C | contextive for context | grill-with-docs | new | external tool |
+| 128 | C | skip needs-triage after to-prd→to-issue | triage/to-issues | new | shipped upstream (rebase) |
+| 127 | C | ADRs different name to avoid LLM bias | grill-with-docs | new | shipped upstream; relates our #299/disc #302 |
+| 126 | C | Spanish version proposal | i18n | new | shipped/declined upstream |
+| 125 | C | rolling question queue grill-with-docs | grill-with-docs | new | shipped upstream; relates our #293 |
+| 123 | C | grill-me-with-docs explicit subagent | grill-with-docs | new | shipped upstream; relates disc #256 |
+| 122 | C | better direct opencode support | platform | new | platform |
+| 121 | C | slash-commands not showing | support | new | support |
+| 120 | C | setup verify-mode tip + column ref | setup | new | shipped upstream (rebase) |
+| 119 | C | recommendation layer load needed skills | orchestrator | new | shipped/declined; relates #197/#162 |
+| 118 | C | why Ubiquitous Language deprecated | Q | new | usage Q; deprecated skill |
+| 117 | C | incomplete ADR after interview | grill-with-docs | new | shipped upstream; relates #299 |
+| 115 | C | ctx recommendation engine | orchestrator | new | dup of 183 |
+| 112 | C | OpenCode support | platform | new | platform |
+| 111 | C | caveman breaks tdd RED→GREEN | caveman/tdd | new | caveman we don't promote |
+| 110 | C | I need assistance | — | new | noise |
+| 109 | C | grill-me-with-docs ignores ADR & code | grill-with-docs | new | shipped upstream; relates #299/#130 |
+| 108 | C | tdd handle missing execute permission | tdd | new | shipped upstream (rebase) |
+| 107 | C | #Визуализация | — | new | noise |
+| 106 | C | verify/check mode for setup | setup | new | declined upstream (#283 policy) |
+| 105 | C | Skillsmith flags TDD false positive | security | new | false positive |
+| 104 | C | asking for feedback | — | new | noise |
+| 103 | C | marketplace.json /plugin marketplace add | packaging | new | dup of #21/#312 deferred |
+| 102 | C | how should grill-me/to-prd/to-issues flow | discussion | new | dup disc themes |
+| 101 | C | iteratively build CONTEXT.md brownfield | grill-with-docs | new | shipped upstream; relates #181 |
+| 100 | C | Star History README | README | new | cosmetic (dup #135) |
+| 99 | C | dex issue tracker backend | triage/to-issues | new | tool we don't use |
+| 98 | C | GitLab support issue tracking | setup | new | shipped upstream (rebase) |
+| 97 | C | blog links broken | docs | new | shipped upstream (rebase) |
+| 96 | C | structured skill metadata validation | packaging | new | shipped upstream (rebase) |
+| 95 | C | fractal tree file structures (deep modules) | improve-codebase-architecture | new | relates #180/#303; revisit for fork take |
+| 94 | C | f | — | new | noise |
+| 93 | C | I think I made a mistake | — | new | noise |
+| 89 | C | implement setup + migrate to vague prose | setup | new | shipped upstream (rebase) |
+| 88 | C | setup scaffolds repo-specific config | setup | new | shipped upstream (rebase) |
+| 87 | C | PRD: Account Data Export (async) | demo PRD | new | generated/demo PRD |
+| 79 | C | propagate domain awareness eng skills | domain | new | shipped upstream (rebase) |
+| 78 | C | to-issues/to-prd write to local folder | to-issues/to-prd | new | shipped upstream (rebase) |
+| 77 | C | SDD in future? | discussion | new | discussion |
+| 76 | C | Dust Settled? | — | new | noise |
+| 73 | C | no skills found error install | support | new | support |
+| 72 | C | install broke after ./skills move | packaging | new | shipped upstream (rebase) |
+| 71 | C | HMMMM… | — | new | noise |
+| 70 | C | выаыау | — | new | noise |
+| 68 | C | new skill for beginners | new skill | new | shipped/declined upstream |
+| 63 | C | broader Decision Records beyond ADRs | grill-with-docs | new | shipped upstream; relates #299 |
+| 55 | C | why so many stars | — | new | noise |
+| 54 | C | NOT WORKING | support | new | support/noise |
+| 38 | C | Claude API free trial 求助 | — | new | noise |
+| 37 | C | ubiquitous language adds (new)(updated) | ubiquitous-language | new | deprecated skill |
+| 33 | C | pop_timeline_green up for review | — | new | spam/noise |
+| 31 | C | wrong installation folder | packaging | new | shipped upstream (rebase) |
+| 29 | C | ubiquitous language usage | ubiquitous-language | new | deprecated skill |
+| 24 | C | tdd add STUB before RED | tdd | new | shipped upstream (rebase) |
+| 19 | C | grill-me not always using question tool | grill-me | new | shipped upstream (rebase) |
+| 18 | C | grill-me always summarise at end | grill-me | new | shipped upstream; our #240 |
+| 17 | C | prd-to-issues don't put tests as slice | to-issues | new | shipped upstream (rebase) |
+| 16 | C | grill-me asks 10+ at once | grill-me | new | shipped upstream; our #221/#45 |
+| 14 | C | typo setup-pre-commit | setup-pre-commit | new | shipped upstream (rebase) |
+| 13 | C | typo setup-pre-commit (dup) | setup-pre-commit | new | dup of 14 |
+| 12 | C | grill-me improvement | grill-me | new | shipped upstream (rebase) |
+| 11 | C | prefix the skills | packaging | new | shipped upstream (rebase) |
+| 10 | C | how to install | Q | new | usage Q |
+| 9 | C | recommendation per question grill-me | grill-me | new | shipped upstream (rebase) |
+| 6 | C | add MIT license | meta | new | shipped upstream (rebase) |
+| 3 | C | native Claude Code marketplace support | packaging | new | dup of #21/#312 deferred |
+| 258 | NP | Jira via Rovo MCP issue tracker | triage/to-issues | new | tool we don't use; matches #116 skip |
+| 137 | NP | ADR explanation in README | grill-with-docs/README | new | relates #299/disc #302 ADR work; README is a hot rebase file, low priority |
+| 135 | NP | GitHub Star History graph in README | README | new | cosmetic; fork doesn't need |
+| 92 | NP | execute local issues without sandcastle | platform/infra | new | usage Q, no skill change |
+| 91 | NP | marketplace.json for plugin marketplace | packaging | new | dup of #21/#312, already deferred |
+| 86 | NP | PRD: Account Data Export | demo PRD | new | generated example, not a skill ask |
+| 85 | NP | PRD: RBAC for workspace members | demo PRD | new | generated example |
+| 84 | NP | PRD: Notification System | demo PRD | new | generated example |
+| 83 | NP | PRD: Notification System (dup) | demo PRD | new | generated example |
+| 82 | NP | Feature: RBAC for workspace members | demo PRD | new | generated example |
+| 80 | NP | separate content skills from backlog (/github) | orchestrator/packaging | new | architecture idea Matt declined; relates #197/#252 |
+| 44 | NP | Codex asked 200 questions | grill | new | question-volume grievance addressed in fork via #221/#240/#45 |
+| 20 | NP | health score influenced by match info | unclear | new | noise |
+| 15 | NP | "what bullsh*t" | — | new | noise |

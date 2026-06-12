@@ -1,6 +1,6 @@
 ---
 name: upstream-issue-triage
-description: Triage open issues on the upstream mattpocock/skills repo against our fork, recording a verdict for each so we never re-analyse the same issue twice. Use when the user wants to review upstream issues, find patches to pull into the fork, or sync the issue triage log.
+description: Triage open and closed issues plus discussions on the upstream mattpocock/skills repo against our fork, recording a verdict for each so we never re-analyse the same item twice. Use when the user wants to review upstream issues, find patches to pull into the fork, or sync the issue triage log.
 metadata:
   internal: true
 ---
@@ -17,10 +17,14 @@ scans `.claude/skills/` directly, so the manifest omission alone is not enough; 
 and what we decided. The point is **incremental**: each run only triages items not
 already in the log, so the work compounds instead of repeating.
 
-`LOG.md` has two tracks: an **Issues** track (`## Full triage`) and a **Discussions**
-track (`## Discussions`). Both use the same verdict vocabulary. Discussions skew to
-`watch`/`skip` — they're mostly ideas without a repro, and Q&A / Show-and-tell /
+`LOG.md` has three tracks: an **Issues** track (`## Full triage`, open issues), a
+**Discussions** track (`## Discussions`), and a **Closed upstream** track
+(`## Closed upstream`, closed issues). All use the same verdict vocabulary. Discussions
+skew to `watch`/`skip` — they're mostly ideas without a repro, and Q&A / Show-and-tell /
 Announcements rarely imply a fork change — so don't expect many to reach `implement`.
+The Closed track skews to `skip`: `COMPLETED`-closed issues reach our fork through
+`git rebase upstream/main`, so re-triaging re-derives code we already inherit;
+`NOT_PLANNED`-closed (Matt declined) is the one bucket with fork value.
 
 Verdicts: **new** (synced, not yet deliberated), **done** (resolved in our fork),
 **implement** (decided to fix, not yet done), **watch** (good idea, but needs design
@@ -37,28 +41,36 @@ the user just runs the skill with no steer, ask which one.
 
 Pure list maintenance. No per-item deliberation, no code changes.
 
-1. **Pull open items.** Issues: `gh issue list --repo mattpocock/skills --state open --limit 100 --json number,title`. Discussions: `gh api graphql -f query='{ repository(owner:"mattpocock",name:"skills"){ discussions(first:100,orderBy:{field:UPDATED_AT,direction:DESC}){ nodes{ number title category{name} closed } } } }'`.
+1. **Pull items.** Open issues: `gh issue list --repo mattpocock/skills --state open --limit 100 --json number,title`. Closed issues: `gh issue list --repo mattpocock/skills --state closed --limit 500 --json number,title,stateReason`. Discussions: `gh api graphql -f query='{ repository(owner:"mattpocock",name:"skills"){ discussions(first:100,orderBy:{field:UPDATED_AT,direction:DESC}){ nodes{ number title category{name} closed } } } }'`.
 2. **Reconcile against [`LOG.md`](./LOG.md):**
    - Any open issue not in `## Full triage` → append a row with verdict `new` and a
      one-line title. Any open discussion not in `## Discussions` → same, noting its
      category. Don't deliberate yet; that's Flow 2.
-   - Any logged row whose issue/discussion is no longer open upstream (closed/merged)
-     → note it as closed upstream so it drops out of the backlog.
+   - Any closed issue not in `## Closed upstream` → append a row with verdict `new`
+     (not pre-judged — the user decides each in Flow 2), its `R` (`C`=COMPLETED /
+     `NP`=NOT_PLANNED), and a factual one-line note for context (likely arrives via
+     rebase, dup, area). Don't mark it `skip` here.
+   - Any logged row in `## Full triage` whose issue is no longer open upstream → move
+     it to `## Closed upstream` with verdict `new`, preserving any prior decision in
+     the note. (A logged discussion that closed upstream → note it closed.)
 3. **Update `Last synced`** to the highest issue number seen and today's date.
-4. **Report** the delta: how many new (issues and discussions), how many now closed
-   upstream, and the new unresolved count. Don't propose fixes here.
+4. **Report** the delta: how many new (open issues, closed issues, discussions), how
+   many moved to closed, and the new unresolved count. Don't propose fixes here.
 
 ## Flow 2 — Review one issue
 
-1. **Pick one unresolved item at random** from either track (verdict `new`,
-   `implement`, or `watch`). Vary the choice across runs — don't always start from
-   the top, and don't always pick issues over discussions. If none are unresolved,
-   say so and suggest Flow 1.
+1. **Pick one unresolved item at random** from any track — `## Full triage`,
+   `## Discussions`, or `## Closed upstream` (verdict `new`, `implement`, or `watch`).
+   Vary the choice across runs — don't always start from the top, and don't always pick
+   open issues over discussions or closed ones. If none are unresolved, say so and
+   suggest Flow 1.
 2. **Study it.** Read its body (for a discussion, `gh api graphql` its body and
-   comments), map it to a skill we actually have (see `plugin.json` + the bucket
-   READMEs — items about skills/tools we don't ship are an immediate `skip`), and
-   grep the target skill to check whether our fork already handles it — half of
-   upstream's asks land here independently.
+   comments; for a closed issue, read it and any closing comment — `COMPLETED` usually
+   means Matt shipped a fix we'll inherit via rebase, so check whether our fork already
+   has it before proposing anything), map it to a skill we actually have (see
+   `plugin.json` + the bucket READMEs — items about skills/tools we don't ship are an
+   immediate `skip`), and grep the target skill to check whether our fork already
+   handles it — half of upstream's asks land here independently.
 3. **Explain and recommend.** Briefly: what the issue reports, which skill it
    touches, whether our fork already handles it, whether it's worth fixing, and your
    recommended verdict with a one-line rationale.
