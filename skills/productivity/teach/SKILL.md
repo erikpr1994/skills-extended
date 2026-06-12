@@ -11,6 +11,7 @@ The user has asked you to teach them something. This is a stateful request - the
 
 Treat the current directory as a teaching workspace. The state of their learning is captured in this directory in several files:
 
+- `index.html`: A **mobile-first dashboard** — the home page for the workspace, linking every lesson, reference document, the mission, and resources. It is the learner's main entry point, especially on a phone. Use the format in [DASHBOARD-FORMAT.md](./DASHBOARD-FORMAT.md).
 - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md).
 - `./reference/*.html`: A directory of reference materials. These are the compressed learnings from the lessons - cheat sheets, reference algorithms, syntax, yoga poses, glossaries. They are the raw units of learning. They should be beautiful documents which print out well, and are designed for quick reference.
 - `RESOURCES.md`: A list of resources which can be explored to ground your teaching in contextual knowledge, or to acquire knowledge and wisdom. Use the format in [RESOURCES-FORMAT.md](./RESOURCES-FORMAT.md).
@@ -60,6 +61,12 @@ Each lesson should link via HTML anchors to other lessons and reference document
 Each lesson should recommend a primary source for the user to read or watch. This should be the most high-quality, high-trust resource you found on the topic.
 
 Each lesson should contain a reminder to ask followup questions to the agent. The agent is their teacher, and can assist with anything that's unclear.
+
+## The Dashboard
+
+The workspace has a single entry point: `index.html` at the root — a **mobile-first dashboard** linking every lesson, reference document, the mission, and the key resources. It's the first thing the learner opens, often on a phone. Create it once the first lesson exists, and keep it current every time you add a lesson or reference. Use the format in [DASHBOARD-FORMAT.md](./DASHBOARD-FORMAT.md).
+
+Lessons and the dashboard are plain HTML, so they open in any browser. To review on a phone, serve the workspace directory with any static server (e.g. `python -m http.server`) and open it over the local network, or through a secure tunnel such as Tailscale or Cloudflare Tunnel for access from anywhere. Always point the learner at `index.html` as the home page.
 
 ## The Mission
 

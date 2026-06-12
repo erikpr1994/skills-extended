@@ -33,7 +33,7 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 337 | grill-with-docs prototype docs home (DESIGN.md) | grill-with-docs | done | Erik filed; shipped in fork (DESIGN.md) |
 | 336 | grill-with-docs prototype UI decision points | grill-with-docs | done | Erik filed; shipped in fork |
 | 335 | teach quiz answer-position tell | teach | done | applied 2026-06-12 |
-| 332 | teach lesson-to-lesson nav buttons | teach | watch | QoL; needs index.html scheme |
+| 332 | teach lesson-to-lesson nav buttons | teach | watch | QoL; needs index.html scheme — now exists via #331 (DASHBOARD-FORMAT.md). Revisit: dashboard gives a home page but not lesson↔lesson prev/next nav |
 | 329 | run triage + tdd agents automatically | triage/tdd | watch | orchestration; larger design |
 | 328 | to-issues handoff-ready issues (stories+notes) | to-issues | watch | |
 | 324 | coordinating multiple team members | discussion | skip | no concrete skill change |
@@ -115,7 +115,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | # | Title (short) | Category | Verdict | Note |
 |---|---|---|---|---|
 | 333 | to-prd (was write-a-prd) doesn't interview | Q&A | new | |
-| 331 | mobile-first dashboard for /teach workspaces | Ideas | new | |
+| 331 | mobile-first dashboard for /teach workspaces | Ideas | done | applied 2026-06-12; added DASHBOARD-FORMAT.md (new root `index.html` home page) + `index.html` workspace-file bullet and "The Dashboard" section to teach SKILL.md. Adapted soymarketing:teach-add-dashboard contributor branch — trimmed to match teach's *-FORMAT.md voice. Docs-only/additive (new file + additive SKILL.md lines), no manifest change. Partly unblocks #332 (lesson nav "needs index.html scheme"). Upstream #331 still OPEN/unanswered (fork PRs disabled) — file/comment upstream too |
 | 322 | nice combination: /teach & /grill-me | Show and tell | new | |
 | 315 | making docs accessible to everyone in company | Q&A | new | |
 | 314 | /teach need knowledge/reference setup? | Q&A | new | |
