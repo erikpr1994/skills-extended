@@ -120,7 +120,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 322 | nice combination: /teach & /grill-me | Show and tell | new | |
 | 315 | making docs accessible to everyone in company | Q&A | new | |
 | 314 | /teach need knowledge/reference setup? | Q&A | new | |
-| 313 | /teach: some related, complementary skills | Ideas | new | |
+| 313 | /teach: some related, complementary skills | Ideas | skip | recommends installing external DrCatHicks learning-science skills (/learning-goal, /learning-opportunities, /orient) alongside /teach — not a change to a skill we ship. No repro, no concrete /teach edit proposed. Vendoring third-party skills isn't this fork's job. /orient conceptually overlaps grill-with-docs/improve-arch but is separate. If teach gets revisited, their goal-setting/spaced-opportunity ideas could inspire a tweak, but nothing actionable now |
 | 304 | naming grill-with-docs skill | General | new | |
 | 302 | CONTEXT-MAP.md ADRs issue? | General | new | relates to #299 |
 | 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
