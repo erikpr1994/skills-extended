@@ -40,7 +40,7 @@ Anything in the repo that documents how code should be written. Common locations
 - `CLAUDE.md`, `AGENTS.md`
 - `CONTRIBUTING.md`
 - `CONTEXT.md`, `CONTEXT-MAP.md`, per-context `CONTEXT.md` files
-- `docs/adr/` (architectural decisions are standards)
+- `docs/adr/` (accepted architectural decisions are standards)
 - `.editorconfig`, `eslint.config.*`, `biome.json`, `prettier.config.*`, `tsconfig.json` (machine-enforced standards — note them but don't re-check what tooling already checks)
 - Any `STYLE.md`, `STANDARDS.md`, `STYLEGUIDE.md`, or similar at the repo root or under `docs/`
 

@@ -7,6 +7,10 @@ Create the `docs/adr/` directory lazily — only when the first ADR is needed.
 ## Template
 
 ```md
+---
+status: proposed
+---
+
 # {Short title of the decision}
 
 {1-3 sentences: what's the context, what did we decide, and why.}
@@ -14,11 +18,21 @@ Create the `docs/adr/` directory lazily — only when the first ADR is needed.
 
 That's it. An ADR can be a single paragraph. The value is in recording *that* a decision was made and *why* — not in filling out sections.
 
+## Status
+
+Every new ADR must carry `status` frontmatter.
+
+- **`proposed`** — the decision is planned but not yet reflected in merged code
+- **`accepted`** — the implementing work has landed (or the ADR records a decision the codebase already reflects)
+- **`deprecated`** — the decision no longer applies
+- **`superseded by ADR-NNNN`** — a later ADR replaces this one
+
+During `/grill-with-docs`, new ADRs usually start as `proposed` because the session runs before implementation. Consumer skills treat only `accepted` ADRs — and legacy ADRs with no status frontmatter — as in-force architecture; `proposed` ADRs are planning context for the current work, not constraints on unrelated work.
+
 ## Optional sections
 
 Only include these when they add genuine value. Most ADRs won't need them.
 
-- **Status** frontmatter (`proposed | accepted | deprecated | superseded by ADR-NNNN`) — useful when decisions are revisited
 - **Considered Options** — only when the rejected alternatives are worth remembering
 - **Consequences** — only when non-obvious downstream effects need to be called out
 

@@ -108,4 +108,6 @@ Only offer to create an ADR when all three are true:
 
 If any of the three is missing, skip the ADR. Use the format in [ADR-FORMAT.md](./ADR-FORMAT.md).
 
+New ADRs created during planning should usually be `proposed`, not `accepted` — promote them only after the implementing work lands. If you're recording a decision the current codebase already reflects, mark it `accepted`.
+
 </supporting-info>
