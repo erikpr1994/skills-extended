@@ -164,7 +164,7 @@ selectable in Flow 2, and Flow 1 keeps them current.
 | 330 | C | how to update synced skills (npx) | packaging | new | usage Q; answered upstream |
 | 327 | C | grill-me decision tree + adversarial + summary | grill-me | new | shipped upstream; our grill-me patched via #240 |
 | 326 | C | teach quiz feature request | teach | new | shipped upstream (rebase) |
-| 325 | C | token-optimized `-condensed` skill variants | packaging/all | new | relates #320/#317 teach-token; revisit for fork take |
+| 325 | C | token-optimized `-condensed` skill variants | packaging/all | skip | proposes a `-condensed` sibling for every shipped skill (preserves normative rules, strips prose; 7-56% load savings — teach/triage −45%, grill-with-docs −56%) + verify-skill-condensed.sh + a condense-a-skill skill. Reference branch kennytrytek-wf:kgt/condense-skills. **Closed COMPLETED but NOT actually on upstream/main** (verified: no condensed dirs/script upstream or in fork) — we will NOT inherit via rebase; adopting = our own work. Erik's call 2026-06-12: skip. Doubling every skill file + re-condense/verify after every upstream skill edit is the single biggest violation of this fork's "keep the diff small / minimize rebase drift" principle — not worth the maintenance even scoped to the heaviest skills. Token-efficiency interest stays under teach-token watches #320/#317 |
 | 319 | C | PRD: Skill Trace 引擎 | demo PRD | new | generated/demo PRD |
 | 318 | C | install command unusable UI | packaging | new | shipped upstream (rebase) |
 | 305 | C | support persisted design decisions | grill-with-docs | new | shipped upstream; relates our #306/#293 design-tree |
