@@ -7,6 +7,6 @@ Interview me relentlessly about every aspect of this plan until we reach a share
 
 Ask the questions one at a time.
 
-If a question can be answered by exploring the codebase, explore the codebase instead.
+If a question can be answered by exploring the codebase, explore the codebase instead — prefer a subagent so the exploration doesn't clutter this conversation.
 
 Once you have no more questions, do not start implementation. Summarise the decisions reached and ask the user for the next step.

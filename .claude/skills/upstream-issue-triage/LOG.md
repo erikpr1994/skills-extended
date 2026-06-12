@@ -131,7 +131,7 @@ fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2
 | 261 | proposal: codehealth-mcp skill | Ideas | new | |
 | 259 | what mode should I run grill-me in? | Q&A | new | |
 | 257 | can /superpowers be complementary? | General | new | |
-| 256 | explore code with subagent in /grill-me | Ideas | new | |
+| 256 | explore code with subagent in /grill-me | Ideas | done | line 10 already explored-instead-of-asked; added "prefer a subagent so exploration doesn't clutter this conversation" (portable, no Explore hardcode). File upstream too |
 | 255 | GitHub Copilot as a supported agent | General | new | platform; likely skip |
 | 248 | anyone tried Claude's rules feature? | Q&A | new | |
 | 246 | /write-a-skill vs Anthropic's /skill-creator | General | new | |
