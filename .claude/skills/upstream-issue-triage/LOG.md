@@ -1,12 +1,13 @@
 # Upstream issue triage log
 
-Durable record of `mattpocock/skills` open issues we've analysed, so we never
-re-triage the same issue. Maintained by the [`upstream-issue-triage`](./SKILL.md)
-skill (Flow 1 syncs new issues as `new`; Flow 2 reviews one unresolved issue).
+Durable record of `mattpocock/skills` open issues and discussions we've analysed, so
+we never re-triage the same item. Maintained by the [`upstream-issue-triage`](./SKILL.md)
+skill (Flow 1 syncs new items as `new`; Flow 2 reviews one unresolved item).
 Verdicts: **new** · **done** · **implement** · **watch** · **skip**. Resolved =
 `done`/`skip`; unresolved (still in the backlog) = `new`/`implement`/`watch`.
+Issues live in `## Full triage`; discussions in `## Discussions`.
 
-**Last synced:** #337 — 2026-06-12
+**Last synced:** issues #337, discussions #333 — 2026-06-12
 
 ## Implement candidates
 
@@ -102,3 +103,42 @@ High-confidence, cheap patches to skills we use. The first four were applied
 | 45 | enforce numbered questions per question | grill | watch | overlaps #221 |
 | 23 | "the flow" | discussion | skip | |
 | 21 | marketplace.json for plugin marketplace | packaging | watch | dup of #312 |
+
+## Discussions
+
+Open `mattpocock/skills` discussions. Same verdicts; skewed to `watch`/`skip` since
+most are ideas without a repro and Q&A / Show-and-tell / Announcements rarely imply a
+fork change. Seeded 2026-06-12 (all `new`, not yet deliberated — that's Flow 2).
+
+| # | Title (short) | Category | Verdict | Note |
+|---|---|---|---|---|
+| 333 | to-prd (was write-a-prd) doesn't interview | Q&A | new | |
+| 331 | mobile-first dashboard for /teach workspaces | Ideas | new | |
+| 322 | nice combination: /teach & /grill-me | Show and tell | new | |
+| 315 | making docs accessible to everyone in company | Q&A | new | |
+| 314 | /teach need knowledge/reference setup? | Q&A | new | |
+| 313 | /teach: some related, complementary skills | Ideas | new | |
+| 304 | naming grill-with-docs skill | General | new | |
+| 302 | CONTEXT-MAP.md ADRs issue? | General | new | relates to #299 |
+| 300 | plan-and-execute: 'how' layer after grill→prd→issues | Show and tell | new | |
+| 293 | /grill-with-docs to state progress | Ideas | new | relates to #311/#337 |
+| 288 | README 'Putting it together' lifecycle section | Ideas | new | |
+| 287 | improve-arch end-state: hand off or stop at ADRs? | Q&A | new | improve-codebase-architecture area |
+| 285 | how does it compare to openspec / spec frameworks | Q&A | new | |
+| 275 | grill-with-docs with multilingual application | General | new | |
+| 270 | writing skills and prompts with TypeScript | Ideas | new | |
+| 267 | featured on Locally Hosted (video) | Show and tell | new | |
+| 261 | proposal: codehealth-mcp skill | Ideas | new | |
+| 259 | what mode should I run grill-me in? | Q&A | new | |
+| 257 | can /superpowers be complementary? | General | new | |
+| 256 | explore code with subagent in /grill-me | Ideas | new | |
+| 255 | GitHub Copilot as a supported agent | General | new | platform; likely skip |
+| 248 | anyone tried Claude's rules feature? | Q&A | new | |
+| 246 | /write-a-skill vs Anthropic's /skill-creator | General | new | |
+| 239 | using curated subsets of skills from plugin | Ideas | new | |
+| 236 | nightshift: autonomous to-prd→to-issues layer | Show and tell | new | |
+| 231 | how to manage high-level roadmaps? | Q&A | new | |
+| 226 | technical design docs in AI workflow | General | new | |
+| 225 | how do you work across multiple repos? | General | new | |
+| 217 | PRD lifecycle after all issues implemented | General | new | |
+| 214 | Welcome to Discussions! | Announcements | new | skip on review |
