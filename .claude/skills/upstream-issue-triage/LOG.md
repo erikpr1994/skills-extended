@@ -181,7 +181,7 @@ selectable in Flow 2, and Flow 1 keeps them current.
 | 276 | C | ship /review | review | new | shipped upstream (rebase) |
 | 273 | C | improve-arch mention severity | improve-codebase-architecture | new | shipped upstream (rebase) |
 | 266 | C | grill-with-docs CONTEXT-FORMAT Rules stale | grill-with-docs | new | shipped upstream (rebase) |
-| 264 | C | takeover skill (mirrors handoff) | handoff | new | relates our handoff/resume-handoff split; revisit for fork take |
+| 264 | C | takeover skill (mirrors handoff) | handoff + resume-handoff | done | deliberated 2026-06-13. #264 asked for a reader-side `/takeover` (ingest handoff, load suggested skills, verify drift, brief, gatekeep irreversible) as the complement to `/handoff`. Already shipped in our fork as `resume-handoff` (the #306 split): drift-check vs anchor SHA, re-probe every `[UNVERIFIED]`, read the named source of truth, re-ground. Upstream closed COMPLETED but shipped NO takeover skill — productivity bucket is handoff-only (write-side, no reader instructions), so a rebase brings nothing for the reader side and there's no collision with our resume-handoff. Residual takeover nits (have the resumer load handoff's "Suggested skills"; 3-5 line briefing) left out deliberately to keep resume-handoff terse; gatekeeping irreversible is already covered (handoff tags next steps `[irreversible — confirm first]` §4 + the harness confirms irreversible actions globally). No fork change |
 | 260 | C | codehealth-mcp skill | MCP | new | MCP tool we don't ship (open dup #261 watch) |
 | 253 | C | add BitBucket git host | setup | new | shipped upstream (rebase) |
 | 251 | C | antigravity harness support | platform | new | platform we don't use |
